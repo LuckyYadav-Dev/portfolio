@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucky Yadav | Software Developer — Python, Web &amp; AI Projects</title>
+  <meta name="description" content="Portfolio of Lucky Yadav, an early-career software developer from Jaipur, India specializing in Python, Web Development, and practical AI applications.">
+  <meta name="keywords" content="Lucky Yadav, Software Developer, Python Developer, Web Development, SustainAI India, Jaipur Developer, BCA">
+  <meta name="author" content="Lucky Yadav">
+  <link rel="canonical" href="https://luckyyadav.dev">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luckyyadav.dev">
+  <meta property="og:title" content="Lucky Yadav | Software Developer">
+  <meta property="og:description" content="Building practical software with Python, Web &amp; AI. Explore SustainAI India, technical skills, and current learning.">
+  <meta property="og:image" content="https://luckyyadav.dev/assets/images/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lucky Yadav | Software Developer">
+  <meta name="twitter:description" content="Building practical software with Python, Web &amp; AI. Explore SustainAI India, technical skills, and current learning.">
+  <meta name="theme-color" content="#090a0f">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23090a0f'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%2310b981' text-anchor='middle'%3ELY%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lucky Yadav",
+    "url": "https://luckyyadav.dev",
+    "jobTitle": "Software Developer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Jaipur", "addressRegion": "Rajasthan", "addressCountry": "IN" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Rajasthan" },
+    "sameAs": [
+      "https://github.com/LuckyYadav-Dev",
+      "https://linkedin.com/in/lucky-yadav-33a943364"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand" aria-label="Lucky Yadav Home">
+        <span class="brand-badge">LY</span>
+        <span class="brand-name">Lucky Yadav</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#project" class="nav-link">Project</a></li>
+          <li><a href="#learning" class="nav-link">Currently Learning</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-secondary btn-sm nav-cta">Get in Touch</a>
+        <a href="assets/resume.pdf" class="btn btn-primary btn-sm" download target="_blank" rel="noopener">Resume</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Available for entry-level developer roles</span>
+          </div>
+          <h1 class="hero-title">
+            Building practical software with <span class="text-gradient">Python, Web &amp; AI.</span>
+          </h1>
+          <p class="hero-description">
+            I'm a final-year BCA student in Jaipur who'd rather build something and see it break than just read about how it's supposed to work. Most of what's on this page came out of that — Python scripts, a lot of half-finished experiments, and one project I'm actually proud to show: SustainAI.
+          </p>
+          <div class="hero-actions">
+            <a href="#project" class="btn btn-primary">
+              View SustainAI India
+              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/LuckyYadav-Dev" target="_blank" rel="noopener" class="social-link" aria-label="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/lucky-yadav-33a943364" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:luckyyadav.biz@gmail.com" class="social-link" aria-label="Direct Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>luckyyadav.biz@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured Project Summary Card -->
+        <div class="hero-visual reveal">
+          <div class="code-card">
+            <div class="code-card-header">
+              <div class="window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="file-name">project / sustainai-india</span>
+            </div>
+            <div class="code-body">
+              <div class="workspace-list">
+                <div class="workspace-item">
+                  <div class="workspace-item-header">
+                    <strong class="workspace-project-name">SustainAI India</strong>
+                    <span class="badge-live">Live Demo</span>
+                  </div>
+                  <p class="workspace-project-desc">AI-powered sustainability platform built with Python &amp; Flask to explore practical environmental choices.</p>
+                  <div class="workspace-tech">Python • Flask • Jinja2 • Gemini API • Chart.js</div>
+                </div>
+
+                <div class="hero-feature-tags">
+                  <span class="hero-tag">GreenRoute AI</span>
+                  <span class="hero-tag">CO2 Emission Calculation</span>
+                  <span class="hero-tag">Food Donation Assistant</span>
+                  <span class="hero-tag">AI Sustainability Coach</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Background</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-card bento-card reveal">
+          <div class="about-text">
+            <p>
+              I'm a final-year BCA student in Jaipur — the kind of degree that hands you the theory, but most of what actually stuck came from sitting down and trying to build something with it.
+            </p>
+            <p>
+              Python is where I'm strongest, but I've worked across Java, PHP, JavaScript, MySQL, and Flask too. I'm particularly drawn to AI applications — not the hype around them, but the practical part: what happens when you actually wire a model into something people can use.
+            </p>
+            <p>
+              I'm still early in this, so I'd rather finish one project properly and understand why it works than half-build ten of them. Clean, structured code isn't a checkbox for me — it's mostly so future-me doesn't hate present-me.
+            </p>
+          </div>
+          <div class="about-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Jaipur, Rajasthan, India</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Education</span>
+              <span class="meta-value">BCA (2023–2026)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Core Focus</span>
+              <span class="meta-value">Python &amp; Web Development</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Completed Work</span>
+              <span class="meta-value">SustainAI India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Project Showcase (SustainAI India) -->
+    <section class="section project-showcase-section" id="project">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Completed Work</span>
+          <h2 class="section-title">SustainAI India</h2>
+          <p class="section-subtitle">AI-powered sustainability platform built to explore how AI can help users make more informed environmental choices.</p>
+        </div>
+
+        <div class="showcase-card bento-card reveal">
+          <div class="showcase-header">
+            <div class="showcase-title-block">
+              <span class="featured-badge">Featured Application</span>
+              <h3 class="showcase-heading">SustainAI — Smarter Sustainable Choices, Powered by AI</h3>
+            </div>
+            <div class="project-actions">
+              <a href="https://sustainai-india.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                Live Demo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+              <a href="https://github.com/LuckyYadav-Dev" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                GitHub Profile
+              </a>
+            </div>
+          </div>
+
+          <p class="showcase-summary">
+            SustainAI is what I built for my Green Skills &amp; Applied AI internship — a Flask app that tries to make sustainability decisions a little less abstract. GreenRoute AI is the core of it: pick a route, and it works out the CO2 cost, a Green Score, and what you'd save by choosing differently. The AI Coach and food donation guidance were added once that core was solid.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Jinja2</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Chart.js</span>
+            <span class="tech-tag">Google Gemini API</span>
+          </div>
+
+          <!-- Feature Breakdown Grid -->
+          <div class="features-breakdown-grid">
+            <div class="breakdown-card">
+              <div class="breakdown-title">
+                <span class="breakdown-icon">01</span>
+                <h4>GreenRoute AI</h4>
+              </div>
+              <ul class="breakdown-list">
+                <li>Calculates travel-related CO2 emissions based on trip details</li>
+                <li>Calculates a green score for selected travel routes</li>
+                <li>Shows potential CO2 savings across alternative options</li>
+                <li>Provides personalized sustainability suggestions</li>
+              </ul>
+            </div>
+
+            <div class="breakdown-card">
+              <div class="breakdown-title">
+                <span class="breakdown-icon">02</span>
+                <h4>Food Donation Assistant</h4>
+              </div>
+              <ul class="breakdown-list">
+                <li>Helps users evaluate surplus food for donation eligibility</li>
+                <li>Provides general donation and safe storage guidance</li>
+                <li>Includes appropriate food-safety disclaimers and tips</li>
+              </ul>
+            </div>
+
+            <div class="breakdown-card">
+              <div class="breakdown-title">
+                <span class="breakdown-icon">03</span>
+                <h4>AI Sustainability Coach</h4>
+              </div>
+              <ul class="breakdown-list">
+                <li>Integrated with Google Gemini API for natural language assistance</li>
+                <li>Generates sustainability-focused explanations and tips</li>
+                <li>Context-aware guidance based on user queries</li>
+              </ul>
+            </div>
+
+            <div class="breakdown-card">
+              <div class="breakdown-title">
+                <span class="breakdown-icon">04</span>
+                <h4>Dashboard &amp; Visuals</h4>
+              </div>
+              <ul class="breakdown-list">
+                <li>Presents sustainability information clearly and visually</li>
+                <li>Chart.js integration for visual data representation</li>
+                <li>Clean Jinja2 server-rendered templates and responsive layouts</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Real Screenshot Gallery with Lightbox Support -->
+          <div class="gallery-wrapper">
+            <div class="gallery-header">
+              <h4 class="gallery-title">Application Screenshots</h4>
+              <span class="gallery-note">Click any image to enlarge</span>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+              <figure class="gallery-item" data-full="assets/images/sustainai-home.png" data-caption="SustainAI India Homepage &amp; Navigation">
+                <div class="image-container">
+                  <img src="assets/images/sustainai-home.png" alt="SustainAI India application homepage interface" loading="lazy">
+                </div>
+                <figcaption class="image-caption">SustainAI Homepage</figcaption>
+              </figure>
+
+              <figure class="gallery-item" data-full="assets/images/greenroute-input.png" data-caption="GreenRoute AI — Input interface and route selection">
+                <div class="image-container">
+                  <img src="assets/images/greenroute-input.png" alt="GreenRoute AI route input interface" loading="lazy">
+                </div>
+                <figcaption class="image-caption">GreenRoute AI Input</figcaption>
+              </figure>
+
+              <figure class="gallery-item" data-full="assets/images/greenroute-result.png" data-caption="GreenRoute AI — CO2 emissions calculation and Green Score">
+                <div class="image-container">
+                  <img src="assets/images/greenroute-result.png" alt="CO2 calculation results and green score display" loading="lazy">
+                </div>
+                <figcaption class="image-caption">CO2 Calculation &amp; Green Score</figcaption>
+              </figure>
+
+              <figure class="gallery-item" data-full="assets/images/ai-coach.png" data-caption="AI Sustainability Coach — Powered by Google Gemini API">
+                <div class="image-container">
+                  <img src="assets/images/ai-coach.png" alt="AI sustainability suggestions powered by Gemini API" loading="lazy">
+                </div>
+                <figcaption class="image-caption">AI Sustainability Suggestions</figcaption>
+              </figure>
+
+              <figure class="gallery-item" data-full="assets/images/food-donation.png" data-caption="Food Donation Assistant — Surplus food evaluation and guidance">
+                <div class="image-container">
+                  <img src="assets/images/food-donation.png" alt="Food Donation Assistant guidance and safety disclaimer" loading="lazy">
+                </div>
+                <figcaption class="image-caption">Food Donation Assistant</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Currently Learning Section -->
+    <section class="section learning-section" id="learning">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Active Focus</span>
+          <h2 class="section-title">Currently Learning</h2>
+          <p class="section-subtitle">What I'm actually spending time on right now, not a wishlist.</p>
+        </div>
+
+        <div class="learning-grid reveal">
+          <div class="learning-card bento-card">
+            <span class="learning-index">01</span>
+            <h3 class="learning-title">Python</h3>
+            <p class="learning-desc">Still tightening the fundamentals — proper OOP, better project structure, and getting comfortable calling APIs instead of just reading about them.</p>
+          </div>
+
+          <div class="learning-card bento-card">
+            <span class="learning-index">02</span>
+            <h3 class="learning-title">Web Development</h3>
+            <p class="learning-desc">Learning to write HTML and CSS that doesn't fall apart on a different screen size — this site is basically the practice ground.</p>
+          </div>
+
+          <div class="learning-card bento-card">
+            <span class="learning-index">03</span>
+            <h3 class="learning-title">PHP &amp; MySQL</h3>
+            <p class="learning-desc">Schema design, queries that won't bite me later, sessions, and generally getting comfortable working against a real database instead of a JSON file.</p>
+          </div>
+
+          <div class="learning-card bento-card">
+            <span class="learning-index">04</span>
+            <h3 class="learning-title">JavaScript</h3>
+            <p class="learning-desc">Async JS finally started clicking after building the lightbox and contact form on this page. Still a work in progress.</p>
+          </div>
+
+          <div class="learning-card bento-card">
+            <span class="learning-index">05</span>
+            <h3 class="learning-title">AI &amp; Automation</h3>
+            <p class="learning-desc">Mostly learning this hands-on through SustainAI's Gemini integration, plus a few smaller experiments with LLM APIs on the side.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Technical Background</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Core technologies and concepts studied through coursework and practical projects.</p>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill-category bento-card">
+            <h3 class="skill-cat-title">Programming</h3>
+            <div class="skill-pill-list">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">PHP</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">C++</span>
+            </div>
+          </div>
+
+          <div class="skill-category bento-card">
+            <h3 class="skill-cat-title">Web Development</h3>
+            <div class="skill-pill-list">
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">Responsive Design</span>
+              <span class="skill-pill">PHP</span>
+              <span class="skill-pill">Flask</span>
+              <span class="skill-pill">Jinja2</span>
+            </div>
+          </div>
+
+          <div class="skill-category bento-card">
+            <h3 class="skill-cat-title">Database</h3>
+            <div class="skill-pill-list">
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">DBMS</span>
+            </div>
+          </div>
+
+          <div class="skill-category bento-card">
+            <h3 class="skill-cat-title">Core CS</h3>
+            <div class="skill-pill-list">
+              <span class="skill-pill">Object-Oriented Programming (OOP)</span>
+              <span class="skill-pill">Data Structures</span>
+              <span class="skill-pill">Algorithms</span>
+              <span class="skill-pill">Operating Systems</span>
+              <span class="skill-pill">Software Engineering</span>
+            </div>
+          </div>
+
+          <div class="skill-category bento-card">
+            <h3 class="skill-cat-title">Tools</h3>
+            <div class="skill-pill-list">
+              <span class="skill-pill">VS Code</span>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-category bento-card">
+            <h3 class="skill-cat-title">AI &amp; Visualization</h3>
+            <div class="skill-pill-list">
+              <span class="skill-pill">Gemini API</span>
+              <span class="skill-pill">Chart.js</span>
+              <span class="skill-pill">AI Applications</span>
+            </div>
+          </div>
+
+          <div class="skill-category bento-card full-width-card">
+            <div class="security-header">
+              <h3 class="skill-cat-title">Cybersecurity (Exposure / Learning)</h3>
+              <span class="subtle-badge">Academic &amp; Lab Practice</span>
+            </div>
+            <p class="security-disclaimer">Familiarity with fundamental security concepts and tools studied through programs and lab platforms:</p>
+            <div class="skill-pill-list">
+              <span class="skill-pill">OWASP Top 10</span>
+              <span class="skill-pill">Network Security Fundamentals</span>
+              <span class="skill-pill">Nmap</span>
+              <span class="skill-pill">Burp Suite</span>
+              <span class="skill-pill">Metasploit</span>
+              <span class="skill-pill">TryHackMe</span>
+              <span class="skill-pill">Hack The Box</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="dual-column-grid">
+          <!-- Experience Column -->
+          <div class="column-block reveal">
+            <div class="section-header">
+              <span class="section-badge">Experience</span>
+              <h2 class="section-title">Internship</h2>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content bento-card">
+                  <div class="timeline-header">
+                    <div>
+                      <h3 class="timeline-title">Web Development Intern</h3>
+                      <span class="timeline-org">PaceX Learning Private Limited</span>
+                    </div>
+                    <span class="timeline-duration">120 Hours</span>
+                  </div>
+                  <p class="timeline-desc">
+                    Worked with HTML, CSS, JavaScript, and PHP on practical web development tasks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Column -->
+          <div class="column-block reveal">
+            <div class="section-header">
+              <span class="section-badge">Education</span>
+              <h2 class="section-title">Academic Background</h2>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content bento-card">
+                  <div class="timeline-header">
+                    <div>
+                      <h3 class="timeline-title">Bachelor of Computer Applications (BCA)</h3>
+                      <span class="timeline-org">University of Rajasthan — Poddar International College, Jaipur</span>
+                    </div>
+                    <span class="timeline-duration">2023 – 2026</span>
+                  </div>
+                  <p class="timeline-desc">
+                    Studying core computer science subjects including programming languages, data structures, database management systems, and software engineering.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section cert-section" id="certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Training</span>
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-subtitle">Certifications and programs completed during my degree.</p>
+        </div>
+
+        <div class="cert-grid reveal">
+          <div class="cert-card bento-card">
+            <div class="cert-top">
+              <span class="cert-issuer">IBM SkillsBuild</span>
+              <span class="cert-grade">Grade A+</span>
+            </div>
+            <h3 class="cert-name">Advanced IT Skills (Artificial Intelligence)</h3>
+            <p class="cert-desc">Covered foundational artificial intelligence concepts and technologies.</p>
+          </div>
+
+          <div class="cert-card bento-card">
+            <div class="cert-top">
+              <span class="cert-issuer">1M1B Foundation / Microsoft Elevate</span>
+              <span class="cert-badge-tag">Bootcamp</span>
+            </div>
+            <h3 class="cert-name">Green Skills &amp; Applied AI for Climate Action</h3>
+            <p class="cert-desc">Bootcamp focused on applied AI ideas for environmental challenges, leading to the development of SustainAI.</p>
+          </div>
+
+          <div class="cert-card bento-card">
+            <div class="cert-top">
+              <span class="cert-issuer">Microsoft CyberShikshaa</span>
+              <span class="cert-badge-tag">Program</span>
+            </div>
+            <h3 class="cert-name">Cyber Security Program</h3>
+            <p class="cert-desc">Program covering network security fundamentals, common threats, and defensive practices.</p>
+          </div>
+
+          <div class="cert-card bento-card">
+            <div class="cert-top">
+              <span class="cert-issuer">PaceX Learning</span>
+              <span class="cert-badge-tag">120 Hours</span>
+            </div>
+            <h3 class="cert-name">Web Development Internship</h3>
+            <p class="cert-desc">Internship certification for completing 120 hours of practical web development work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub CTA -->
+    <section class="section github-cta-section">
+      <div class="container">
+        <div class="cta-banner bento-card reveal">
+          <div class="cta-text">
+            <span class="section-badge">GitHub</span>
+            <h2 class="cta-title">Explore My Code</h2>
+            <p class="cta-desc">
+              Explore my projects, experiments, and development work on GitHub.
+            </p>
+          </div>
+          <div class="cta-action">
+            <a href="https://github.com/LuckyYadav-Dev" target="_blank" rel="noopener" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View GitHub Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-badge">Contact</span>
+          <h2 class="section-title">Let's build something useful.</h2>
+          <p class="section-subtitle">Feel free to reach out directly via email or LinkedIn.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card bento-card reveal">
+            <h3 class="contact-heading">Contact Details</h3>
+            
+            <div class="contact-method">
+              <span class="method-label">Email</span>
+              <a href="mailto:luckyyadav.biz@gmail.com" class="method-link">luckyyadav.biz@gmail.com</a>
+            </div>
+
+            <div class="contact-method">
+              <span class="method-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/lucky-yadav-33a943364" target="_blank" rel="noopener" class="method-link">linkedin.com/in/lucky-yadav-33a943364</a>
+            </div>
+
+            <div class="contact-method">
+              <span class="method-label">GitHub</span>
+              <a href="https://github.com/LuckyYadav-Dev" target="_blank" rel="noopener" class="method-link">github.com/LuckyYadav-Dev</a>
+            </div>
+
+            <div class="contact-method">
+              <span class="method-label">Location</span>
+              <span class="method-text">Jaipur, Rajasthan, India</span>
+            </div>
+          </div>
+
+          <div class="contact-form-card bento-card reveal">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <span>Send Email</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <p class="form-note" id="formStatus">Opens your default email client with your message prefilled.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal for Screenshots -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close screenshot preview">&times;</button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" type="button">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-name">Lucky Yadav</span>
+        <span class="footer-role">Software Developer</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/LuckyYadav-Dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/lucky-yadav-33a943364" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:luckyyadav.biz@gmail.com">Email</a>
+      </div>
+      <div class="footer-right">
+        <p>&copy; <span id="footerYear">2026</span> Lucky Yadav.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

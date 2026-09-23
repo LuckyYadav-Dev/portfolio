@@ -605,6 +605,40 @@ textarea:focus-visible {
   gap: 0.75rem;
 }
 
+/* Other Projects Grid */
+.other-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.other-project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-project-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.other-project-card p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.other-project-card .tech-tags {
+  margin-bottom: 1rem;
+}
+
+.other-project-card .project-actions {
+  margin-top: auto;
+}
+
 /* Features Breakdown Grid */
 .features-breakdown-grid {
   display: grid;

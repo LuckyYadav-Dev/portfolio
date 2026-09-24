@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScreenshotLightbox();
   initScrollSpy();
   initBackToTop();
+  initVinylPlayer();
   setFooterYear();
 });
 
@@ -249,6 +250,131 @@ function initBackToTop() {
       top: 0,
       behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
     });
+  });
+}
+
+/**
+ * Vinyl player - a decorative "now playing" widget in the footer.
+ * If the site owner drops a real file at assets/audio/ambient-loop.mp3,
+ * that plays. Otherwise it falls back to a soft, generated ambient pad
+ * via the Web Audio API, so the disc always has something to spin to.
+ */
+function initVinylPlayer() {
+  const disc = document.getElementById('vinylDisc');
+  const tonearm = document.getElementById('vinylTonearm');
+  const playBtn = document.getElementById('vinylPlayBtn');
+  const eq = document.getElementById('vinylEq');
+  const audioEl = document.getElementById('vinylAudio');
+
+  if (!disc || !playBtn) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let audioCtx = null;
+  let ambientNodes = null;
+  let usingRealAudio = false;
+  let isPlaying = false;
+
+  function startSynthAmbient() {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) return;
+    if (!audioCtx) audioCtx = new AudioContextClass();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+
+    const now = audioCtx.currentTime;
+
+    const masterGain = audioCtx.createGain();
+    masterGain.gain.setValueAtTime(0, now);
+    masterGain.gain.linearRampToValueAtTime(0.05, now + 1.5);
+    masterGain.connect(audioCtx.destination);
+
+    const filter = audioCtx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = 900;
+    filter.connect(masterGain);
+
+    // Soft, slow-moving pad chord - generated, not a copyrighted track.
+    const noteFrequencies = [220, 277.18, 329.63];
+    const oscillators = noteFrequencies.map((freq) => {
+      const osc = audioCtx.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+      osc.connect(filter);
+      osc.start();
+      return osc;
+    });
+
+    // Slow LFO on the filter for a gentle "breathing" lo-fi movement
+    const lfo = audioCtx.createOscillator();
+    lfo.frequency.value = 0.08;
+    const lfoGain = audioCtx.createGain();
+    lfoGain.gain.value = 250;
+    lfo.connect(lfoGain);
+    lfoGain.connect(filter.frequency);
+    lfo.start();
+
+    ambientNodes = { masterGain, oscillators, lfo };
+  }
+
+  function stopSynthAmbient() {
+    if (!ambientNodes || !audioCtx) return;
+    const now = audioCtx.currentTime;
+    const { masterGain, oscillators, lfo } = ambientNodes;
+
+    masterGain.gain.cancelScheduledValues(now);
+    masterGain.gain.setValueAtTime(masterGain.gain.value, now);
+    masterGain.gain.linearRampToValueAtTime(0, now + 0.6);
+
+    window.setTimeout(() => {
+      oscillators.forEach((osc) => osc.stop());
+      lfo.stop();
+    }, 700);
+
+    ambientNodes = null;
+  }
+
+  function setPlayingUI(playing) {
+    playBtn.classList.toggle('is-playing', playing);
+    playBtn.setAttribute('aria-pressed', String(playing));
+    if (!prefersReducedMotion) {
+      disc.classList.toggle('spinning', playing);
+    }
+    if (tonearm) tonearm.classList.toggle('active', playing);
+    if (eq) eq.classList.toggle('active', playing);
+  }
+
+  function play() {
+    const hasSource = audioEl && audioEl.querySelector('source');
+    if (hasSource) {
+      const playPromise = audioEl.play();
+      if (playPromise && typeof playPromise.then === 'function') {
+        playPromise
+          .then(() => { usingRealAudio = true; })
+          .catch(() => { usingRealAudio = false; startSynthAmbient(); });
+        return;
+      }
+    }
+    startSynthAmbient();
+  }
+
+  function stop() {
+    if (usingRealAudio && audioEl) {
+      audioEl.pause();
+      usingRealAudio = false;
+    } else {
+      stopSynthAmbient();
+    }
+  }
+
+  playBtn.addEventListener('click', () => {
+    isPlaying = !isPlaying;
+    setPlayingUI(isPlaying);
+
+    if (isPlaying) {
+      play();
+    } else {
+      stop();
+    }
   });
 }
 
